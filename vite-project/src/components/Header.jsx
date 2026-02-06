@@ -1,9 +1,9 @@
 import './Header.css'
 
-export default function Header(x){
+export default function Header({title}){
     return (
         <>
-            <h1>{x.title}</h1>
+            <h1>{title}</h1>
 
             <nav>
                 <a href="#">HOME </a>
