@@ -1,6 +1,7 @@
 import './App.css'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
+import Registration from './components/Registration.jsx'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <div>
       <Header title="My first React App"/> 
       <Header title="Lets Explore"/>
+      <Registration />
 
       <Footer year={y} company={c} />
     </div>
