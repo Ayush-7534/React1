@@ -1,9 +1,10 @@
 import './Header.css'
 
-export default function Header({title}){
+export default function Header({card}){
     return (
         <>
-            <h1>{title}</h1>
+            {/* <h1>{title}</h1> */}
+            {card}
 
             <nav>
                 <a href="#">HOME </a>
