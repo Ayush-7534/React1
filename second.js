@@ -55,14 +55,30 @@
 // }
 // greet("User");
 
-const factorial = function(n){ // this is anonanymus function
-    if(n==0 || n==1)
-        return 1;
-    else
-        return n*factorial(n-1); 
-}
+// const factorial = function(n){ // this is anonanymus function
+//     if(n==0 || n==1)
+//         return 1;
+//     else
+//         return n*factorial(n-1); 
+// }
 
-console.log(factorial(5));
+// console.log(factorial(5));
+
+// Map Method   - to store array elements with changes in new array
+
+// const number = [1,2,3]
+// const newnumber = number.map(function(n){   // 1st way
+//     return n*2;
+// })
+
+// console.log(newnumber);
+
+// const number = [1,2,3]
+// const newnumber = number.map(n=>n*2);        // 2nd way
+// console.log(newnumber);
 
 
-
+// Filter 
+const number = [1,2,3]
+const newnum = number.filter((n)=>n%2==0)
+console.log(newnum);
