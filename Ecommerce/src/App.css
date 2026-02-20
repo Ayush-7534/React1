@@ -40,3 +40,20 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.card {
+  padding: 2em;
+  border: 1px solid #181616;
+  border-radius: 10px;
+  margin: 15px;
+  display: inline-block;
+  width: 200px;
+}
+
+/* ✅ Small image */
+.product-image {
+  width: 120px;
+  height: 100px;
+  object-fit: contain;
+}
