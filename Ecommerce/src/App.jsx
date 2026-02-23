@@ -3,6 +3,7 @@ import Header from './Components/Header';
 import ProductList from './Components/ProductList';
 import Cart from './Components/Cart';
 import Search from './Components/Search'
+import UserForm from './Components/UserForm';
 
 import './App.css'
 
@@ -44,6 +45,7 @@ const totalAmount = cart.reduce((total,index)=>total + index.price,0)
     <div>
       <Header cartCount={cart.length}/>
       <Search />
+      <UserForm />
       <ProductList products={product} addToCart={addToCart}/>
       <Cart cart={cart} removeFromCart={removeFromCart} totalAmount={totalAmount}/>
       
