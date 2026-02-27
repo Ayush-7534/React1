@@ -55,18 +55,4 @@ const totalAmount = cart.reduce((total,index)=>total + index.price,0)
   )
 }
 
-// import { useEffect } from "react";
-// import './App.css'
 
-// export default function App(){
-//   useEffect(()=> {console.log("Welcome")},[])
-
-//   return(
-//     <>
-//     <h1>
-//       My App
-//     </h1>
-    
-//     </>
-//   )
-// }
