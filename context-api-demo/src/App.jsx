@@ -1,27 +1,32 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ThemeContext, UserContext, LangContext } from "./context";
 
 const App = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
-  const { user, setUser } = useContext(UserContext);
-  const { lang, setLang } = useContext(LangContext);
+  const { state, dispatch } = useContext(ThemeContext);
 
   return (
     <div>
-      <h2>Theme: {theme}</h2>
-      <button onClick={toggleTheme}>Toggle Theme</button>
+      <h2>Theme: {state.theme}</h2>
+      <button onClick={() => dispatch({ type: "TOGGLE_THEME" })}>
+        Toggle
+      </button>
 
-      <h2>User: {user.name}</h2>
-      <button onClick={() => setUser({ name: "Ayush" })}>
+      <h2>User: {state.user.name}</h2>
+      <button
+        onClick={() =>
+          dispatch({ type: "SET_USER", payload: { name: "Ayush" } })
+        }
+      >
         Change User
       </button>
 
-      <h2>Language: {lang}</h2>
-      <button onClick={() => setLang("french")}>
-        Change Language
+      <h2>Lang: {state.lang}</h2>
+      <button onClick={() => dispatch({ type: "SET_LANG", payload: "hi" })}>
+        Change Lang
       </button>
     </div>
   );
 };
 
 export default App;
+
