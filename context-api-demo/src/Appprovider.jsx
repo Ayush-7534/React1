@@ -1,6 +1,6 @@
 // import { useState } from "react";    // no need with reducer
 import { useContext, useReducer } from "react";
-import { ThemeContext, UserContext, LangContext } from "./context";
+import { GlobalContext, UserContext, LangContext } from "./context";
 
 //2. create reducer function
 function reducer(state,action){
@@ -50,13 +50,10 @@ const Appprovider = ({ children }) => {
     // };
 
     return (
-        <ThemeContext.Provider value={{ state , dispatch }}>
-            <UserContext.Provider value={{ state , dispatch }}>
-                <LangContext.Provider value={{ state , dispatch}}>
-                    {children}
-                </LangContext.Provider>
-            </UserContext.Provider>
-        </ThemeContext.Provider>
+        
+            <GlobalContext.Provider value={{ state , dispatch}}>
+                {children}
+            </GlobalContext.Provider>
     );
 };
 

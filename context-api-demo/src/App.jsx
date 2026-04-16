@@ -1,8 +1,9 @@
 import { useContext, useState } from "react";
-import { ThemeContext, UserContext, LangContext } from "./context";
+import { GlobalContext, UserContext, LangContext } from "./context";
 
 const App = () => {
-  const { state, dispatch } = useContext(ThemeContext);
+  const { state, dispatch } = useContext(GlobalContext);
+  const {theme,user,lang} = state;
 
   return (
     <div>
